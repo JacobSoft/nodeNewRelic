@@ -1,0 +1,39 @@
+/* Adjust content down slightly for navbar */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+}
+
+.jumbotron {
+    background-image: url("../images/smithrock.jpg");
+    background-size: 100% 100%;
+}
+
+.mainbody {
+    color: white;
+}
+
+#about {
+    background-image: url("../images/halfdome2.jpg");
+    background-size: 100% 100%;
+}
+
+#admin {
+    background-image: url("../images/desire.jpg");
+    background-size: 100% 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 6px 14px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}

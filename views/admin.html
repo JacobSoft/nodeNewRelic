@@ -1,0 +1,78 @@
+<% include header.html %>
+<!doctype html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Theme Template">
+    <meta name="author" content="Nick Batlle and Jake Clark">
+<!--    <link rel="icon" href="images/favicon.ico">-->
+	<title>CONTROL BOARD</title>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css">
+    
+    <!-- CSS files below will not link without a more specific file path (ex: ../public/css/ etc..) included when viewing the html page in a browser alone, however it WILL show the CSS when you spin up the app on the local host using the below file paths-->
+    
+        <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom stylesheet-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div class="jumbotron" id="admin">
+    <div class="container">
+        <!--Try to come back to this to change h1 style using css, not in-line. Works for now-->
+        <font color=#b6b5c1><h1>WELCOME, COMMANDER</h1></font>
+        <br>
+        <br>
+        <br>
+        <p class="mainbody">Bacon ipsum dolor amet ut in veniam short loin. Pork ut voluptate, porchetta chuck swine fatback. Bresaola non est, dolore turducken shankle in reprehenderit shoulder consectetur consequat jowl enim ham. Tongue pig ut do burgdoggen, voluptate tenderloin aliqua lorem chicken proident enim dolore magna. Reprehenderit meatball ad, occaecat in bacon pariatur duis aliquip pork short ribs fugiat shankle esse. </p>
+        <br>
+    </div>
+</div>    
+    
+     <div class="container">
+      <!-- Begin content columns -->
+      <div class="row">
+        <div class="col">
+          <h2>Admin Controls:</h2>
+         <form>
+	       <fieldset>
+            <input name="selectall" id="selectall" value="View All Records" type="button" class="btn btn-warning"/>
+               <br>
+               <br>
+        <script>
+            $('#selectall').click(function(){
+            $.get('/selectall')
+            });
+        </script>
+            <input name="selectall" id="selectall" value="Edit Records" type="button" class="btn btn-warning"/>
+               <br>
+               <br>
+            <input name="selectall" id="selectall" value="Delete Records" type="button" class="btn btn-warning"/>
+        </fieldset>
+        </form>     
+       </div>
+      </div>
+     </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+      <footer>
+        <p>Copyright &copy 2017 AutoThematic.Com</p>
+      </footer>
+    </div> <!-- /container -->
+    
+</body>
+</html>

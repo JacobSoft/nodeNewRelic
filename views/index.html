@@ -1,0 +1,128 @@
+<% include header.html %>
+<!doctype html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Theme Template">
+    <meta name="author" content="Nick Batlle and Jake Clark">
+<!--    <link rel="icon" href="images/favicon.ico">-->
+	<title>Node Live Project</title>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css">
+    
+    <!-- CSS files below will not link without a more specific file path (ex: ../public/css/ etc..) included when viewing the html page in a browser alone, however it WILL show the CSS when you spin up the app on the local host using the below file paths-->
+    
+        <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom stylesheet-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+
+</head>
+<body>
+    
+<!-- Main jumbotron body-->
+<div class="jumbotron">
+    <div class="container">
+        <!--Try to come back to this to change h1 style using css, not in-line. Works for now-->
+        <font color=#837896><h1>Node Live Project</h1></font>
+        <br>
+        <p class="mainbody">Bacon ipsum dolor amet ut in veniam short loin. Pork ut voluptate, porchetta chuck swine fatback. Bresaola non est, dolore turducken shankle in reprehenderit shoulder consectetur consequat jowl enim ham. Tongue pig ut do burgdoggen, voluptate tenderloin aliqua lorem chicken proident enim dolore magna. Reprehenderit meatball ad, occaecat in bacon pariatur duis aliquip pork short ribs fugiat shankle esse. Dolore kevin tri-tip bacon velit. Frankfurter pariatur prosciutto, tongue do id quis shoulder.</p>
+
+       
+<!-- Modal section for signing up for newsletters -->
+<!--Main page sign up button-->
+<button type="button" onclick="document.getElementById('email').style.display='block'" class="btn btn-warning" data-target="#email">Sign Up!</button>
+<button type="button" onclick="document.getElementById('login').style.display='block'" class="btn btn-info" data-target="#login">Login!</button>
+<!-- Begin Email Sign Up Modal -->           
+<div class="modal" id="email" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" onclick="document.getElementById('email').style.display='none'" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title" id="modalLabel">Sign Up!</h3>
+                <div class="modal-body">
+                    <p>Sign up for our weekly newsletters, bringing you the latest in all the things.   
+                </div><!-- modal-body -->
+            
+        <div class="modal-footer">
+    <form action="/subscribe" method="post" class="box login">
+	   <fieldset>
+	  <input type="text" tabindex="1" placeholder="Enter Your First Name" name="firstname" required>
+	  <input type="text" tabindex="1" placeholder="Enter Your Last Name" name="lastname" required>
+        <br>
+	  <input type="text" tabindex="1" placeholder="Enter Your Email" name="email" required>
+	   </fieldset>
+	<footer>
+        <br>
+        <button type="submit" class="btn btn-warning">Sign up!</button>
+	</footer>
+        </form>
+      </div>
+     </div><!-- modal-header -->
+    </div><!-- modal-content -->
+   </div><!-- modal-dialog -->
+  </div><!-- /Email Sign Up modal -->
+    <!-- Begin Login Modal -->           
+    <div class="modal" id="login" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" onclick="document.getElementById('login').style.display='none'" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title" id="modalLabel">Login to your account:</h3>
+                <div class="modal-body">
+                    <p>Please enter your email and password below   
+                </div><!-- modal-body -->
+            
+       <div class="modal-footer">
+    <form action="/login" method="post" class="box login">
+	   <fieldset>
+	  <input type="text" tabindex="1" placeholder="Enter Your Email" name="username" required>
+      <input type="text" tabindex="1" placeholder="Enter Your Password" name="password" required>
+	   </fieldset>
+	<footer>
+        <br>
+        <button type="submit" class="btn btn-info">Login!</button>
+	</footer>
+        </form>
+      </div>
+     </div><!-- modal-header -->
+    </div><!-- modal-content -->
+   </div><!-- modal-dialog -->
+  </div><!-- /Loginmodal -->  
+ </div>
+</div>
+
+    <div class="container">
+      <!-- Begin content columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Column 1</h2>
+          <p>Bacon ipsum dolor amet tenderloin pork belly corned beef ground round kevin venison kielbasa pastrami landjaeger. Biltong cupim chuck fatback pig. Landjaeger meatloaf rump t-bone pork belly kevin brisket venison pig turducken pancetta chicken fatback flank. Venison sausage meatloaf pastrami pancetta tenderloin frankfurter, alcatra capicola landjaeger boudin bresaola salami rump. Tongue porchetta capicola meatloaf shankle cupim. Hamburger turkey pork picanha. </p>
+          <p><a class="btn btn-default" href="#" role="button">CLICK THIS &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Column 2</h2>
+          <p>Bacon ipsum dolor amet doner leberkas bresaola sausage. Pastrami ham chicken, leberkas salami cupim bresaola tail jowl meatloaf ham hock. Rump ribeye fatback ham hock salami porchetta tail chuck spare ribs meatloaf doner t-bone alcatra. Rump tenderloin boudin pork loin jerky hamburger prosciutto cow tongue. Biltong rump landjaeger swine ground round. Rump bacon pancetta beef ribs chuck frankfurter. Salami ground round alcatra, cupim spare ribs sausage pork bacon jerky. </p>
+          <p><a class="btn btn-default" href="#" role="button">CLICK IT NOW &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Column 3</h2>
+          <p>Sirloin brisket bresaola, filet mignon capicola flank pig drumstick fatback. Cupim strip steak pork belly, pig boudin short ribs leberkas. Bacon doner t-bone meatloaf picanha frankfurter. Kevin corned beef ham bresaola swine short ribs. Landjaeger porchetta tail burgdoggen picanha pork loin jerky chuck biltong filet mignon shankle ground round tri-tip shank.</p>
+          <p><a class="btn btn-default" href="#" role="button">PUSH THE BUTTON &raquo;</a></p>
+        </div>
+      </div>
+<br>
+<br>
+      <footer>
+        <p>Copyright &copy; <script>new Date().getFullYear()>2010&&document.write(""+new Date().getFullYear());</script>, AutoThematic.Com</p>
+      </footer>
+    </div> <!-- /container -->
+
+</body>
+</html>
