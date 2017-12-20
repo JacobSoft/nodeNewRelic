@@ -11,10 +11,11 @@ var urlencodedParser = bodyParser.urlencoded ({ extended: true })
 
 //configure database connection info:
     var config = {
-        user: 'Jake',
-        password: 'klpc1229',
-        server: 'STUDENT-PC\\SQLEXPRESS', 
-        database: 'NodeSubscriber',
+        user: 'nodesubscriber',
+        password: 'nodeliveproject*',
+        server: 'mssql5.gear.host', 
+        database: 'nodesubscriber',
+        port: 1433,
     };
 
 async = require("async");
