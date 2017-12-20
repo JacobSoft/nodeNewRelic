@@ -15,7 +15,7 @@ var urlencodedParser = bodyParser.urlencoded ({ extended: true })
         password: 'nodeliveproject*',
         server: 'mssql5.gear.host', 
         database: 'nodesubscriber',
-        port: 1433,
+        port: 1433
     };
 
 async = require("async");
@@ -85,6 +85,36 @@ response.redirect('/');
             });
         });    
 });
+    
+  /*  app.post('/login',
+             passport.authenticate('local', {successRedirect: '/',
+                                            failureRedirect: '/login',
+                                            failureFlash: 'Invalid username or password',
+                                            successFlash: 'Welcome!'})
+             );
+    
+    var passport = require('passport');
+    var localStrategy = require('passport-local').Strategy;
+    
+    passport.use(new LocalStrategy({
+        usernameField: 'email',
+        passwordFiled: 'passwd',
+        passReqToCallback: true,
+        session: false},
+        
+        function(username, password, done) {
+        User.findOne({ username: username }, function (err, user) {
+            if (err) { return done(err); }
+            if (!user) {
+                return done(null, false, { message: 'Incorrect username.' });
+            }
+            if (!user.verifyPassword(password)) {
+                return done(null, false, {message: 'Incorrect password.' });
+            }
+            return done(null, user);
+        });
+    }
+                                   )); */
     
 	app.get('/', function(request, response) {
 		response.render('index.html');
